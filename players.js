@@ -1,31 +1,35 @@
 let players = [
     {
-        firstname: "Francisco",
-        lastname: "Lindor",
-        age: 29,
-        position: "SS",
+        firstname: "Luka",
+        lastname: "Dončić",
+        age: 26,
+        position: "Forward-Guard",
+        jersey: 77,
         picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
         
 },
 {
-        firstname: "Francisco",
-        lastname: "Lindor",
-        age: 29,
-        position: "SS",
+        firstname: "Dorian",
+        lastname: "Finney-Smith",
+        age: 32,
+        position: "Forward",
+        jersey: 17,
         picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
         
 },{
-        firstname: "Francisco",
-        lastname: "Lindor",
-        age: 29,
-        position: "SS",
+        firstname: "Jordan",
+        lastname: "Goodwin",
+        age: 26,
+        position: "Guard",
+        jersey: 30,
         picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
         
 },{
-        firstname: "Bob",
-        lastname: "Barker",
+        firstname: "Rui",
+        lastname: "Hachimura",
         age: 29,
-        position: "SS",
+        position: "Forward",
+        jersey: 28,
         picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
         
 },{
