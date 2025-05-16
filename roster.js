@@ -51,7 +51,5 @@ let ht=document.createElement("h3");
 ht.textContent=`${p.firstname} ${p.lastname}`
 player.appendChild(ht)
 grid.appendChild(player)
-
     });
-
 }
