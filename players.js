@@ -5,7 +5,7 @@ let players = [
         age: 26,
         position: "Forward-Guard",
         jersey: 77,
-        picture: "https://https://cdn.nba.com/teams/uploads/sites/1610612747/2025/02/2425_RosterPage_Player_LDoncic_3_1040x1210.jpg",
+        picture: "imgs/2425_RosterPage_Player_LukaDoncic_3_1040x1210.avif",
         
 },
 {
@@ -14,7 +14,7 @@ let players = [
         age: 32,
         position: "Forward",
         jersey: 17,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_DorianFinneySmith_1040x1210_2.webp",
         
 },{
         firstname: "Jordan",
@@ -22,7 +22,7 @@ let players = [
         age: 26,
         position: "Guard",
         jersey: 30,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_JordanGoodwin_1040x1210.avif",
         
 },{
         firstname: "Rui",
@@ -30,7 +30,7 @@ let players = [
         age: 29,
         position: "Forward",
         jersey: 28,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_RuiHachimura_1040x1210.avif",
         
 },{
         firstname: "Jaxson",
@@ -38,7 +38,7 @@ let players = [
         age: 24,
         position: "Center-Forward",
         jersey: 11,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_JaxonHayes_1040x1210-1.webp",
         
 },{
         firstname: "Bronny",
@@ -46,7 +46,7 @@ let players = [
         age: 20,
         position: "Guard",
         jersey: 9,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_BronnyJames_1040x1210.avif",
         
 },{
         firstname: "LeBron",
@@ -54,7 +54,7 @@ let players = [
         age: 40,
         position: "Forward",
         jersey: 23,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_LeBronJames_1040x1210.avif",
         
 },{
         firstname: "Dalton",
@@ -62,7 +62,7 @@ let players = [
         age: 24,
         position: "Forward",
         jersey: 4,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_DaltonKnecht_1040x1210.webp",
         
 },{
         firstname: "Alex",
@@ -70,7 +70,7 @@ let players = [
         age: 31,
         position: "Center",
         jersey: 27,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_AlexLen_2_1040x1210.avif",
         
 },{
         firstname: "Shake",
@@ -78,7 +78,7 @@ let players = [
         age: 28,
         position: "Guard",
         jersey: 20,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_ShakeMilton_1040x1210_2.webp",
         
 },{
         firstname: "Markieff",
@@ -86,7 +86,7 @@ let players = [
         age: 35,
         position: "Forward",
         jersey: 88,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_MarkieffMorris_2_1040x1210.webp",
         
 },{
         firstname: "Austin",
@@ -94,7 +94,7 @@ let players = [
         age: 26,
         position: "Guard",
         jersey: 15,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_AustinReaves_1040x1210.avif",
         
 },{
         firstname: "Jarred",
@@ -102,7 +102,7 @@ let players = [
         age: 24,
         position: "Forward",
         jersey: 2,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_JarredVanderbilt_1040x1210.avif",
         
 },{
         firstname: "Gabe",
@@ -110,7 +110,7 @@ let players = [
         age: 27,
         position: "Guard",
         jersey: 7,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_GabeVincent_1040x1210.avif",
         
 },{
         firstname: "Trey",
@@ -119,7 +119,7 @@ let players = [
         age: 25,
         position: "Center",
         jersey: 55,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_TreyJeminson_1040x1210.avif",
         
 },{
         firstname: "Christian",
@@ -127,7 +127,7 @@ let players = [
         age: 24,
         position: "Center",
         jersey: 10,
-        picture: "https://www.mlbstatic.com/team-logos/MLB/NYM.png",
+        picture: "imgs/2425_RosterPage_Player_ChristianKoloko_1040x1210.webp",
         
 }
 ]
