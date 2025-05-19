@@ -1,55 +1,60 @@
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const grid = document.getElementById("rosterGrid");
-//     const render = list => {
-//         grid.innerHTML = "";
-    
-    
-    
-    
-    
-    
-    
-    
-//     render(players)}
-
-//         list.forEach(p => {
-//             const col = document.createElement("div");
-//             card.className = "card";
-//             card.innerHTML = `
-//                 <img src="${p.picture}" alt="${p.firstname} ${p.lastname}">
-//                 <h3>${p.firstname} ${p.lastname}</h3>
-//                 <p>Age: ${p.age}</p>
-//                 <p>Position: ${p.position}</p>
-//             `;
-//             grid.appendChild(card);
-//         })})
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () =>{
-    render()
-})
-function render(){
-    const grid = document.getElementById("rosterGrid")
-    players.forEach(p=>{
-      let player = document.createElement("div");
-      player.classList.add("card")
-      let image = document.createElement("img")
-    image.src=p.picture
-    image.alt=`${p.firstname} ${p.lastname}`
+class Player{
+constructor(firstname, lastname, age, position, jersey, picture){
+    this.firstname=firstname
+    this.lastname=lastname
+    this.age=age
+    this.position=position
+    this.jersey=jersey
+    this.picture=picture
+}
+render(){
+    let col=document.createElement("div");
+    col.classList.add("col")
+    let player = document.createElement("div");
+    player.classList.add("card")
+    let image = document.createElement("img")
+    image.src = this.picture
+    image.alt = `${this.firstname} ${this.lastname}`
     player.appendChild(image)
-let ht=document.createElement("h3");
-ht.textContent=`${p.firstname} ${p.lastname}`
-player.appendChild(ht)
-grid.appendChild(player)
-    });
+    let ht = document.createElement("h3");
+    ht.textContent = `${this.firstname} ${this.lastname}`
+    player.appendChild(ht)
+    const button = document.createElement("button");
+    button.innerText = "Click Me";
+    
+    player.appendChild(button)
+    col.appendChild(player)
+    return col
+}
+
+}
+
+class Team{
+    constructor(p){
+        this.player=[]
+p.forEach(pp=>{
+    this.player.push(new Player(pp.firstname, pp.lastname, pp.age, pp.position, pp.jersey, pp.picture))
+})
+    }
+    getAllPlayers(){
+    const grid = document.getElementById("rosterGrid")
+
+this.player.forEach(p=>{
+grid.appendChild(p.render())
+})
+
+    }
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let team = new Team(players)
+    team.getAllPlayers()
+})
+
+function modal(){
+
 }
