@@ -21,9 +21,18 @@ render(){
     player.appendChild(ht)
     const button = document.createElement("button");
     button.innerText = "Click Me";
-    
+    button.type='button'
+    button.classList.add('btn')
+    button.classList.add("btn-primary")
     player.appendChild(button)
-    col.appendChild(player)
+    button.setAttribute("data-target", '#modal'); 
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-firstname", this.firstname)
+    button.setAttribute("data-lastname", this.lastname)
+    button.setAttribute("data-age", this.age)
+    button.setAttribute("data-position", this.position)
+    button.setAttribute("data-jersey", this.jersey)
+ // Add the data-toggle attribute
     return col
 }
 
