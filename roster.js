@@ -9,21 +9,22 @@ class Player {
     }
     render() {
         let col = document.createElement("div");
-        col.classList.add("col")
+        col.classList.add("col-sm-12")
+        col.classList.add("col-lg-3")
         let player = document.createElement("div");
         player.classList.add("card")
         let image = document.createElement("img")
         image.src = this.picture
         image.alt = `${this.firstname} ${this.lastname}`
         player.appendChild(image)
-        let ht = document.createElement("h3");
+        let ht = document.createElement("h5");
         ht.textContent = `${this.firstname} ${this.lastname}`
         player.appendChild(ht)
         const button = document.createElement("button");
         button.innerText = "Click Me";
         button.type = 'button'
         button.classList.add('btn')
-        button.classList.add("btn-primary")
+        button.classList.add("btn-warning")
         player.appendChild(button)
         button.setAttribute("data-bs-target", '#modal');
         button.setAttribute("data-bs-toggle", "modal");
