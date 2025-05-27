@@ -17,11 +17,11 @@ class Player {
         image.src = this.picture
         image.alt = `${this.firstname} ${this.lastname}`
         player.appendChild(image)
-        let ht = document.createElement("h5");
+        let ht = document.createElement("h2");
         ht.textContent = `${this.firstname} ${this.lastname}`
         player.appendChild(ht)
         const button = document.createElement("button");
-        button.innerText = "Click Me";
+        button.innerText = "More Info   ";
         button.type = 'button'
         button.classList.add('btn')
         button.classList.add("btn-warning")

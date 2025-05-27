@@ -2,10 +2,11 @@ body, html {
     margin: 0;
     padding: 0;
     padding: 25px;
-    background-color: white;
+    background-color: rgb(119, 0, 255);
     color: black;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif
+    
 }
 #splash {
     position: fixed; /* Ensures it stays in place */
@@ -34,7 +35,7 @@ img{
 }
   
 .dark-mode {
-    background-color: black;
+    background-color: rgba(183, 0, 255, 0.236);
     color: white;
   }
   .btn{
@@ -48,4 +49,13 @@ img{
   nav{
     justify-content: center;
   }
-
+  .card{
+    border-radius: 10px;
+    /* border-width: 10px;
+    border-color: #ff0000; */
+    overflow: hidden
+  }
+  h2{
+    text-align: center
+  }
+/**/
