@@ -1,61 +1,61 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    padding: 25px;
-    background-color: rgb(119, 0, 255);
-    color: black;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif
-    
+body,
+html {
+  margin: 0;
+  padding: 0;
+  padding: 25px;
+  background-color: rgb(119, 0, 255);
+  color: black;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #splash {
-    position: fixed; /* Ensures it stays in place */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #ffff; /* Adjust as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999; /* Ensures it appears above everything */
-    transition: opacity 1s ease-out;
+  position: fixed; /* Ensures it stays in place */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffff; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensures it appears above everything */
+  transition: opacity 1s ease-out;
 }
 
 #splash img {
-    width: 150px; /* Adjust size */
-    height: auto;
+  width: 150px; /* Adjust size */
+  height: auto;
 }
 #main-content {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
-img{
-    width: 100%
+img {
+  width: 100%;
 }
-  
+
 .dark-mode {
-    background-color: rgba(183, 0, 255, 0.236);
-    color: white;
-  }
-  .btn{
-    padding: 0.4px
-  }
-  .navimg {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-  nav{
-    justify-content: center;
-  }
-  .card{
-    border-radius: 10px;
-    /* border-width: 10px;
+  background-color: rgba(183, 0, 255, 0.236);
+  color: white;
+}
+.btn {
+  padding: 0.4px;
+}
+.navimg {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+nav {
+  justify-content: center;
+}
+.card {
+  border-radius: 10px;
+  /* border-width: 10px;
     border-color: #ff0000; */
-    overflow: hidden
-  }
-  h2{
-    text-align: center
-  }
+  overflow: hidden;
+}
+h2 {
+  text-align: center;
+}
 /**/
