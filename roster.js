@@ -1,18 +1,4 @@
-
-   // constructor(firstname, lastname, age, position, jersey, picture) {
-
-
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    let team = new Team(players)
-    team.getAllPlayers()
-});
-*/
-
-
-
-
+// roster.js
 // document.addEventListener('DOMContentLoaded', () => {
 //   // ----- DOM element references -----
    const grid = document.getElementById('rosterGrid') // container for all player cards
@@ -79,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 function seeMore(playerId) {
     // Find the player from your array using the ID
+   
+   //need to define
     const player = players.find(p => `${p.firstname}-${p.lastname}` === playerId);
 
     if (!player) {
