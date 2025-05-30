@@ -1,81 +1,98 @@
-class Player {
-    constructor(firstname, lastname, age, position, jersey, picture) {
-        this.firstname = firstname
-        this.lastname = lastname
-        this.age = age
-        this.position = position
-        this.jersey = jersey
-        this.picture = picture
-    }
-    render() {
-        let col = document.createElement("div");
-        col.classList.add("col-sm-12")
-        col.classList.add("col-lg-3")
-        let player = document.createElement("div");
-        player.classList.add("card")
-        let image = document.createElement("img")
-        image.src = this.picture
-        image.alt = `${this.firstname} ${this.lastname}`
-        player.appendChild(image)
-        let ht = document.createElement("h2");
-        ht.textContent = `${this.firstname} ${this.lastname}`
-        player.appendChild(ht)
-        const button = document.createElement("button");
-        button.innerText = "More Info   ";
-        button.type = 'button'
-        button.classList.add('btn')
-        button.classList.add("btn-warning")
-        player.appendChild(button)
-        button.setAttribute("data-bs-target", '#modal');
-        button.setAttribute("data-bs-toggle", "modal");
-        button.setAttribute("data-firstname", this.firstname)
-        button.setAttribute("data-lastname", this.lastname)
-        button.setAttribute("data-age", this.age)
-        button.setAttribute("data-position", this.position)
-        button.setAttribute("data-jersey", this.jersey)
-        button.addEventListener("click", (event) => {
-            const click = event.target
 
-
-            document.getElementById('title').textContent = click.getAttribute("data-firstname") + " " + click.getAttribute("data-lastname")
-            document.getElementById('age').textContent = "Age: " + click.getAttribute("data-age")
-            document.getElementById('jersey').textContent = "Jersey: " + click.getAttribute("data-jersey")
-            document.getElementById('position').textContent = "Position: " + click.getAttribute("data-position")
-        })
-        // Add the data-toggle attribute
-        col.appendChild(player);
-        return col
-    }
-
-}
-
-class Team {
-    constructor(p) {
-        this.player = []
-        p.forEach(pp => {
-            this.player.push(new Player(pp.firstname, pp.lastname, pp.age, pp.position, pp.jersey, pp.picture))
-        })
-    }
-    getAllPlayers() {
-        const grid = document.getElementById("rosterGrid")
-
-        this.player.forEach(p => {
-            grid.appendChild(p.render())
-        })
-
-    }
-}
+   // constructor(firstname, lastname, age, position, jersey, picture) {
 
 
 
-
-
+/*
 document.addEventListener("DOMContentLoaded", () => {
     let team = new Team(players)
     team.getAllPlayers()
-})
+});
+*/
 
-function modal() {
 
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   // ----- DOM element references -----
+   const grid = document.getElementById('rosterGrid') // container for all player cards
+  const searchInput = document.getElementById('searchInput') // search box for filtering players
+   const sortSelect = document.getElementById('sortSelect') // dropdown for sorting options
+
+   // Fail-safe: exit if the roster container is missing
+  
+
+   // ----- Function to render the roster -----
+  //const render = players => {
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!grid) {
+      console.error("Could not find #rosterGrid in the DOM.");
+      return;
+    }
+
+    grid.innerHTML = ""; // clear current roster
+    players.forEach((p) => {
+      const col = document.createElement("div");
+      col.className = "col-6 col-lg-2"; // responsive grid: 2 per row on mobile, 5 per row on desktop
+
+      // Inject card HTML using Bootstrap classes
+      col.innerHTML = `
+         <div class="card h-100 shadow-sm">
+           <img src="${p.picture}" class="card-img-top" alt="${p.firstname} ${p.lastname}">
+           <div class="card-body text-center">
+             <h5 class="card-title mb-1">${p.firstname} ${p.lastname}</h5>
+             
+             <button class="btn-warning" onClick="seeMore('${p.firstname}-${p.lastname}')">More Info</button>
+             
+             <div id='${p.firstname}-${p.lastname}' style="display:none">
+             
+             <div class='badge badge-position badge-pos-${p.position}' style="color:black;">${p.position}</div>
+  
+             <p class="small text-muted mb-0">Age ${p.age}</p>
+             <p class="jersey">Jersey: ${p.jersey}</p>
+             
+             <div>
+             
+             
+             
+           </div>
+         </div>
+         
+         <script>
+         
+         function seeMore(){
+           
+           var content = document.getElementById('${p.firstname}-${p.lastname}');
+           content.style.display = "block";
+         
+         }
+         
+         </script>
+         
+         `
+
+       // Add the card to the grid
+       grid.appendChild(col)
+     })
+   }
+         
+    );
+function seeMore(playerId) {
+    // Find the player from your array using the ID
+    const player = players.find(p => `${p.firstname}-${p.lastname}` === playerId);
+
+    if (!player) {
+        console.error("Player not found!");
+        return;
+    }
+
+    // Populate the modal with player data
+    document.getElementById("title").textContent = `${player.firstname} ${player.lastname}`;
+    document.getElementById("age").textContent = `Age: ${player.age}`;
+    document.getElementById("position").textContent = `Position: ${player.position}`;
+    document.getElementById("jersey").textContent = `Jersey: ${player.jersey}`;
+
+    // Show the Bootstrap modal
+    const modal = new bootstrap.Modal(document.getElementById("modal"));
+    modal.show();
 }
-
