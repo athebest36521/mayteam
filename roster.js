@@ -19,7 +19,7 @@
     //line 20 ensures references the <div> tag, 21 represents Bootstrap
     players.forEach((p) => {
       const col = document.createElement("div");
-      col.className = "col-6 col-lg-2"; // responsive grid: 2 per row on mobile, 5 per row on desktop
+      col.className = "col-6 col-lg-6"; // responsive grid: 2 per row on mobile, 5 per row on desktop
 
       // Line 27: Stores content for the player (p) alt if img isn't there, or it fails to load 
       //line 31: Displays first name and last name under the player
